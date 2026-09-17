@@ -1,0 +1,7 @@
+In this project, I researched the switch statement, which is a control flow structure in Java used to execute a specific block of code out of multiple possible options. It appears in 2 places in Main. It first appears inside the combat loop to process the player's battle action (Attack, Defend, or Potion). It also appears again at the end of the round to process the chosen reward. A switch statement checks a single variable and matches it against different case values. This is very useful because it provides a much cleaner and readable alternative to writing long if-else statements. The program also uses the break keyword to stop the code from executing the other cases under the matched cases.
+
+Sources:
+https://builtin.com/articles/java-switch-case
+https://www.w3schools.com/java/java_switch.asp
+
+I added an attemptFlee() method to Player.java that returns a boolean (25% chance true and 75% false), and then called that method inside a new switch case in Main.java. So now the player has a chance to flee the cave but if he fails to flee he loses his turn. I chose this change because it something fun to add onto the switch statement I just learned about. I modified the Player.java and the Main.java files. I also included comments showing when the new code starts and ends. The only somewhat of a challenge I came across was making sure the 25 75 chance was correct instead of accidentally flipping it.

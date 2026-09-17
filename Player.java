@@ -76,7 +76,15 @@ public class Player extends Character {
         public int getId() {
             return id;
         }
-        
+
+    // NEW CODE
+    // Calculates if the player successfully flees
+    public boolean attemptToFlee() {
+        // Returns true 25% of the time, false 75% of the time
+        return Math.random() < 0.25;
+    }
+    // END NEW CODE
+
     // Convenience method for increasing damage (for a later version...)
     /**public void increaseDamage(int amount) {
     *    weaponDamage += amount;

@@ -78,6 +78,7 @@ public class Main {
                     System.out.println("1) Attack");
                     System.out.println("2) Defend");
                     System.out.println("3) Use Healing Potion");
+                    System.out.println("4) Attempt to Flee"); // Added option for fleeing
                     System.out.print("> ");
 
                     String choice = scanner.nextLine();
@@ -110,6 +111,20 @@ public class Main {
                         case "3":
                             player.usePotion();
                             break;
+
+                        // NEW CODE
+                        case "4":
+                            System.out.println("Player " + player.getId() + " attempts to flee...");
+                            
+                            if (player.attemptToFlee()) {
+                                System.out.println("Player " + player.getId() + " has successfully fled the cave!");
+                                goblins.clear(); 
+                            } 
+                            else {
+                                System.out.println("The Goblins have blocked your escape!");
+                            }
+                            break;
+                        // END NEW CODE
 
                         default:
                             System.out.println("Invalid choice. Turn skipped.");
